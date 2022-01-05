@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
+
+@font-face {
+    font-family: 'Ivy Mode';
+    src: url('IvyMode-Light.eot');
+    src: local('Ivy Mode Light'), local('IvyMode-Light'),
+        url('../font/IvyMode-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ivy Mode';
+    src: url('IvyMode-Regular.eot');
+    src: local('Ivy Mode Regular'), local('IvyMode-Regular'),
+        url('../font/IvyMode-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ivy Mode';
+    src: url('IvyMode-SemiBold.eot');
+    src: local('Ivy Mode SemiBold'), local('IvyMode-SemiBold'),
+        url('../font/IvyMode-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+.blind{
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.inner{
+    padding: 0 20px;
+}
+
+h2.title{
+    font-weight: 300;
+    font-size: 12.5vw;
+    font-family: 'Ivy Mode', sans-serif;
+    color: #6A7893;
+}
+.btn_group{
+    display: flex;
+    justify-content: center;
+}
+
+/* more */
+.more{
+    display: block;
+    text-align: center;
+    font-family: 'Ivy Mode', sans-serif;
+    font-style: italic;
+    color: #26ACEB;
+    position: relative;
+    font-size: 15px;
+    height: 26px;
+    padding: 0 50px 0 15px;
+    margin-top: 17px;
+}
+.more::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(38, 172, 235, 0.08);
+    left: 0;
+    top: 35%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: background-color 0.4s ease-in-out;
+    transition: background-color 0.4s ease-in-out;
+}
+.more::after{
+    content: '';
+    width: 28px; height: 12px;
+    position: absolute;
+    top: 2px; right: 0;
+    transform: translateX(-50%);
+    background-position: -23px -92px;
+}
+
+/* add */
+.add{
+    display: block;
+    text-align: center;
+    font-family: 'Ivy Mode', sans-serif;
+    font-size: 15px;
+    padding: 8px 24px 15px;
+    font-style: italic;
+    color: #26ACEB;
+    margin-bottom: 10px;
+    position: relative;
+}
+.add::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    background-color: #26ACEB;
+    -webkit-transition: background-color 0.4s ease-in-out;
+    transition: background-color 0.4s ease-in-out;
+}
+
+
+header h1, header .right_wrap .search, header .right_wrap .cart,
+.main_vis .bottom_arrow, .more::after, footer .fimg .sp_bg::after,
+.sns_area ul li a .ins::after, .sns_area ul li a .face::after,
+.sns_area ul li a .twi::after, .sns_area ul li a .you::after{
+    background-image: url(../img/sp_bg.png);
+    background-size: 133px;
+    background-repeat: no-repeat;
+}
+
+/* pagenation */
+.next{
+    width: 40px; height: 35px;
+    background-image: url(../img/prev.png);
+    background-position: 1px -3px;
+    background-repeat: no-repeat;
+    background-size: 45px;
+    display: inline-block;
+    position: absolute;
+    top: 50%; left: 44px;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    cursor: pointer;
+}
+.prev{
+    width: 40px; height: 35px;
+    background-image: url(../img/next.png);
+    background-position: -5px -3px;
+    background-repeat: no-repeat;
+    background-size: 45px;
+    display: inline-block;
+    position: absolute;
+    top: 49.3%; right: 3px;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    cursor: pointer;
+}
